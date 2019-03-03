@@ -1,0 +1,6 @@
+#!/bin/sh
+
+BINDIR=$(dirname $0)
+. "${BINDIR}/activate"
+
+python -m ezarchiver.restore $*

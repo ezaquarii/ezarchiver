@@ -1,0 +1,13 @@
+b2:
+  account_id: <your bucket account id>
+  application_key: <your bucket auth key>
+  bucket: <your bucket name>
+  folder: /backups/foo
+encrypt_key: <your gpg key id or e-mail>
+root: /home/foo
+exclude:
+  - exclude_1
+  - ...
+include:
+  - include_1
+  - ...

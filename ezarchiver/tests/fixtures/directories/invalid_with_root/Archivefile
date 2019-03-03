@@ -1,0 +1,14 @@
+b2:
+  account_id: test_id
+  application_key: test_key
+  bucket: test_bucket
+root: /some/explicit/root/that/should/not/be/here
+encrypt_key: test_gpg_key
+exclude:
+  - test_exclude_1
+  - test_exclude_2
+  - test_exclude_3
+include:
+  - test_include_1
+  - test_include_2
+  - test_include_3

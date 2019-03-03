@@ -1,0 +1,10 @@
+.idea
+*.pyc
+.pytest_cache
+env
+ienv
+build
+dist
+*.swp
+*.egg-info
+

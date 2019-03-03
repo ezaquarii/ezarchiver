@@ -1,0 +1,7 @@
+b2:
+  account_id: test_id
+  application_key: test_key
+  bucket: test_bucket
+  folder: test_archive
+encrypt_key: test_gpg_key
+
