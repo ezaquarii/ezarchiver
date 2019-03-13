@@ -11,6 +11,26 @@ distributions.
 
 http://duplicity.nongnu.org/
 
+# Installation
+
+### Make into a custom directory
+
+You need a GNU Make.
+
+```
+$ make install DESTDIR=/opt/ezarchiver/
+```
+
+### Debian package
+
+All dependencies are supplied in `pypi` directory in source form and
+the build runs off-line. **No dependencies fetching from the internet!**
+
+```
+$ debuild -uc -us -b
+$ sudo dpkg -i ../ezarchiver*.deb
+```
+
 # Honorable mention
 
 I have to mention another tool that IMO does a great job as a `tar`
@@ -178,10 +198,16 @@ That's all!
 
 # FAQ
 
+### Why packaging whole virtualenv?
+
+Dependencies shipped by distributions are older than I needed and
+some are not packaged at all. Newest Duplicity is not even published
+in PyPI!
+
 ### But duplicity has so many more features! Why U No Provide Them!
 
 I simply don't need them. This is a purpose-built tool, optimized
-for a specific flow.
+for a specific use case.
 
 ### Why not FTP?
 

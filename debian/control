@@ -1,0 +1,25 @@
+Source: ezarchiver
+Section: utils
+Priority: optional
+Maintainer: Chris Narkiewicz <hello@ezaquarii.com>
+Build-Depends: build-essential,
+	debhelper (>= 10),
+	debhelper (>= 11),
+	devscripts (>= 2.17),
+	dh-virtualenv (>= 1.0),
+	librsync-dev (>= 0.9.7),
+	make (>= 4),
+	python-dev (>= 2.7),
+	sudo
+Standards-Version: 4.1.2
+Homepage: https://github.com/ezaquarii/ezarchiver
+Vcs-Git: https://github.com/ezaquarii/ezarchiver
+
+Package: ezarchiver
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python (>=2.7.10)
+Description: easy to use frontend to the duplicity backup system
+ ezarchiver is a python front end to duplicity that simplifies the usage
+ by managing settings for each backup job in an Archivefile. Archivefile
+ (inspired by Dockerfile) is a backup profile that can be kept in archived
+ tree or separately.

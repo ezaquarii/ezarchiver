@@ -1,0 +1,3 @@
+ezarchiver: package-installs-python-bytecode
+ezarchiver: binary-without-manpage
+ezarchiver: wrong-path-for-interpreter

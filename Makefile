@@ -26,9 +26,8 @@ install: $(ENVDIR) $(DESTDIR)/bin
 	$(DESTDIR)/bin/pip install --find-links $(CURDIR)/duplicity $(CURDIR)/dist/ezarchiver-1.0.0-py2-none-any.whl
 
 distclean:
-	rm -rf env
-	rm -rf ienv
-	rm -rf build
-	rm -rf dist
-	rm -rf ezarchiver.egg-info
-	find -type d -name .pytest_cache | xargs rm -rf
+	git clean -fdx
+
+dpkg: distclean
+	gbp buildpackage
+

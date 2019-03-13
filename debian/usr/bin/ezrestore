@@ -1,0 +1,6 @@
+#!/bin/sh
+
+BINDIR=/usr/lib/ezarchiver/venv/bin
+. "${BINDIR}/activate"
+
+python -m ezarchiver.restore $*

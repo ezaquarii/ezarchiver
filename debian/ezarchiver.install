@@ -1,0 +1,2 @@
+debian/usr/bin/ezarchive /usr/bin/
+debian/usr/bin/ezrestore /usr/bin/

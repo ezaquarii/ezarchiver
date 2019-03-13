@@ -8,3 +8,12 @@ dist
 *.swp
 *.egg-info
 
+# Those files are created during deb build
+debian/files
+.cache/
+.pydistutils.cfg
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/ezarchiver.postinst.debhelper
+debian/ezarchiver.substvars
+debian/ezarchiver/

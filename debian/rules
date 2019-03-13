@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+
+export DH_VIRTUALENV_INSTALL_ROOT=/usr/lib/ezarchiver/
+
+%:
+	dh $@ --with python-virtualenv
+
+override_dh_virtualenv:
+	echo $(PWD)
+	(echo '[easy_install]'; \
+	 echo "allow_hosts = ''"; \
+	 echo 'find_links = file://$(PWD)/pypi/') \
+		>$(PWD)/.pydistutils.cfg
+	HOME=$(PWD) dh_virtualenv \
+			--python /usr/bin/python2 \
+			--install-suffix='venv' \
+			--upgrade-pip \
+			--extra-pip-arg --no-cache \
+			--extra-pip-arg --no-index \
+			--extra-pip-arg --find-links=pypi \
+			--requirements=requirements.txt
+	find debian/ezarchiver -name '*.pyc' | xargs rm
+	find debian/ezarchiver -name '__pycache__' -type d | xargs rm -rf
